@@ -1,17 +1,15 @@
-//
-// Created by ruben on 4/5/19.
-//
 
 #ifndef LINKEDLISTVSBINARYTREE_BINARYTREE_H
 #define LINKEDLISTVSBINARYTREE_BINARYTREE_H
 #include "Location.h"
-
+#include <fstream>
 namespace UTEC {
 
     struct Node {
         Location data;
         Node* right;
         Node* left;
+        Node(Location _data): data{_data}, right{nullptr}, left{nullptr}{}
     };
 
     class BinarySearchTree {
@@ -23,7 +21,7 @@ namespace UTEC {
         void clear();
         bool is_empty();
         Node* get_root();
-        Node* search(std::string position_id);
+        Node* search(int position_id);
         void print();
     };
 
