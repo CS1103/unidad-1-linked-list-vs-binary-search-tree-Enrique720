@@ -5,7 +5,7 @@
 #ifndef LINKEDLISTVSBINARYTREE_LOCATION_H
 #define LINKEDLISTVSBINARYTREE_LOCATION_H
 #include <string>
-
+#include <iostream>
 class Location {
     int position_id;
     std::string state_code;
@@ -15,6 +15,7 @@ class Location {
     std::string line;
     std::string construction;
 public:
+    int get_pos();
     Location(
             int position_id,
             std::string state_code,
@@ -23,7 +24,7 @@ public:
             double longitude,
             std::string line,
             std::string construction);
-
+    void imprimir_Location();
     // Declare los metodos que crea necesario
 
     // Cree que sea necesario agregar destructor, justifique
